@@ -6,7 +6,7 @@ module.exports = {
     context: srcPath,
     target: 'web',
 
-    entry: './public/js/script.js',
+    entry: './public/components/App.js',
     output: {
         path: srcPath,
         filename: './public/js/bundle.js',
@@ -17,12 +17,15 @@ module.exports = {
         extensions: ['*', '.js', '.json']
     },
     module: {
-        rules: [
-            {
-                test: /\.js$/,
-                loader: 'babel-loader'
+      rules: [
+        {
+            test: /\.js$/,
+            loader: 'babel-loader',
+            options: {
+              presets:['es2015','react']
             }
-        ]
-    },
-    devtool: 'source-map'
+        }
+    ]
+  },
+  devtool: 'source-map'
 };
