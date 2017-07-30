@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Gmap from './Gmap.js';
+import Gmap from './components/Gmap.js';
 
 class App extends Component {
   render() {
