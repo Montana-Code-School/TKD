@@ -4,7 +4,7 @@
   ```npm install```
 
 In ```PaymentBackend/constats/stripe.js``` change ```sk_test_MY_SECRET_KEY``` to your Stripe secret key. <br>
-  ```node PaymentBackend/index.js```
-  ```npm run start```
+  ```node PaymentBackend/index.js``` <br>
+  ```npm run start``` <br>
   <p>Test it out! :)</p>
 
