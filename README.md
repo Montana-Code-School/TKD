@@ -2,9 +2,9 @@
 <h4>Run all commands from root folder</h4>
 
   ```npm install```
- <ul>
-  <li>In ```PaymentBackend/constats/stripe.js``` change ```sk_test_MY_SECRET_KEY``` to your Stripe secret key.
-  <li>```node PaymentBackend/index.js```</li>
-  <li>```npm run start```</li>
-  <li>Test it out! :)</li>
-</ul>
+
+In ```PaymentBackend/constats/stripe.js``` change ```sk_test_MY_SECRET_KEY``` to your Stripe secret key.
+  ```node PaymentBackend/index.js```
+  ```npm run start```
+  <p>Test it out! :)</p>
+
