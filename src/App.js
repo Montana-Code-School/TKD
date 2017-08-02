@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Checkout from './components/Checkout';
 import Gmap from './components/Gmap.js';
 
 class App extends Component {
@@ -8,6 +8,11 @@ class App extends Component {
     return (
       <div className="App">
         <Gmap/>
+        <Checkout
+          name={'Product Name'}
+          description={'Something you buy'}
+          amount={1}
+        />
       </div>
     );
   }
