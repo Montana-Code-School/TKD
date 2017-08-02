@@ -1,3 +1,4 @@
+
 # Canvas Web App for React-Node-MySQL
 
 This is a fully working canvas for a React Web App with the following characteristics:
@@ -31,7 +32,7 @@ This is a fully working canvas for a React Web App with the following characteri
  mysql -u root
  mysql> source sample.sql;
  ```
- 
+
  At this point you can test the actual connection to the database.
  ```
  mysql> use books;
@@ -62,7 +63,7 @@ This is a fully working canvas for a React Web App with the following characteri
  ```
  The last lines of the output should be
  ```
- Starting the development server... 
+ Starting the development server...
 
  Compiled successfully!
 
@@ -308,3 +309,13 @@ Redux-Saga handles waiting for our asychronous calls (similar to promises)
 ```
 npm install --save redux-saga
 ```
+
+<h2>Instructions for startup</h2>
+<h4>Run all commands from root folder</h4>
+
+  ```npm install```
+
+In ```PaymentBackend/constats/stripe.js``` change ```sk_test_MY_SECRET_KEY``` to your Stripe secret key. <br>
+  ```node PaymentBackend/index.js``` <br>
+  ```npm run start``` <br>
+  <p>Test it out! :)</p>

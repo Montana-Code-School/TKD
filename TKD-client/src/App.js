@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Gmap from './Gmap.js';
+import Checkout from './components/Checkout';
+import Gmap from './components/Gmap.js';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Gmap/>
+        <Checkout
+          name={'Product Name'}
+          description={'Something you buy'}
+          amount={1}
+        />
       </div>
     );
   }

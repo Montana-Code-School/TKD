@@ -14,7 +14,15 @@
     "babel-preset-stage-0": "6.24.1",
     "express": "4.15.3",
     "fs": "0.0.1-security",
-    "mysql": "^2.11.1"
+    "mysql": "^2.11.1",
+    "axios": "^0.16.2",
+    "dotenv": "^4.0.0",
+    "e": "0.0.4",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-gmaps": "^1.6.0",
+    "react-scripts": "1.0.10",
+    "react-stripe-checkout": "^2.6.3"
   },
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
