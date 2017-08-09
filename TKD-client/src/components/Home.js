@@ -3,6 +3,7 @@ import Header from './Header';
 import ColoredNav from './ColoredNav';
 import Gmap from './Gmap';
 import headerImg from '../img/homeMainImg.jpg';
+import Footer from './Footer.js';
 
 export default class Home extends React.Component {
 
@@ -13,7 +14,9 @@ render() {
   return (
     <div className='container'>
       <Header />
-      <img className="mainImg" src={headerImg} alt="Saja Academy" />
+        <div className="mainImg">
+          <img src={headerImg} alt="Tae Kwon Do class practicing blocking" />
+        </div>
       <h1>Saja Academy</h1>
       <h2>Tae Kwon Do For The Whole Family</h2>
       <ColoredNav />
@@ -55,6 +58,7 @@ render() {
             <h2>sajaacademyma@gmail.com</h2>
           </div>
       </div>
+      <Footer />
     </div>
   );
 }
