@@ -18,8 +18,8 @@ if (process.env.NODE_ENV === 'production') {
 
 const host = "localhost"
 const user = "root"
-const pswd = "Pedie1969"
-const dbname = "Julia_B"
+const pswd = ""
+const dbname = ""
 
 // config db ====================================
 const pool = mysql.createPool({
