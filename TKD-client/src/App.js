@@ -4,6 +4,7 @@ import './App.css';
 // import Registration from './components/Registration.js';
 import Home from './components/Home.js';
 import About from './components/About.js';
+import Gallery from './components/Gallery.js';
 
 class App extends Component {
   render() {
@@ -11,6 +12,7 @@ class App extends Component {
       <div className="App">
         <Home />
         <About />
+        <Gallery />
 
       </div>
     );
