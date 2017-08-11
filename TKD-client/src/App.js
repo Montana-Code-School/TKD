@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './App.css';
 // import Checkout from './components/Checkout';
 //import Registration from './components/Registration.js';
