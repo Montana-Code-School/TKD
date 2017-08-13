@@ -17,7 +17,7 @@ class Gmap extends React.Component {
         height={'600px'}
         lat={46.5081587}
         lng={-114.0967987}
-        zoom={8}
+        zoom={15}
         loadingMessage={'Saja Academy of Martial Arts'}
         params={params}
         onMapCreated={this.onMapCreated}>
