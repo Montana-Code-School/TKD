@@ -1,10 +1,10 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer.js';
-import galleryImg from ''; /*File pathway for big header picture goes here */
+// import galleryImg from ''; /*File pathway for big header picture goes here */
 import kicksImg from '../img/class_photo_2_kicks.jpg';
 import classImg1 from '../img/class_photo_1.jpg';
-import classImg3 from '../img/class_photo_3';
+import classImg3 from '../img/class_photo_3.jpg';
 import staffsImg from '../img/class_photo_4_with_staffs.jpg';
 import swordImg1 from '../img/class_photo_5_with_swords.jpg';
 import swordImg2 from '../img/class_photo_6_with_swords_2.jpg';
@@ -16,14 +16,14 @@ export default class Gallery extends React.Component {
   render () {
     return (
       <div className="container">
-      {/* Navbar */}
+
         <Header />
-      {/*Title Image and text*/}
+
       <div className="mainImg">
-        <img className="galleryImg" src={galleryImg} alt='' />
+
       </div>
         <h1>Gallery</h1>
-      {/*body*/}
+
       <div>
         <div>
           <img className="gridImg" src={kicksImg} alt='Tae Kwon Do kids doing kicks' />
@@ -56,12 +56,12 @@ export default class Gallery extends React.Component {
           <img className="gridImg" src={lungeImg} alt='Tae Kwon Do class doing lunges'/>
         </div>
         <div>
-          <img className="gridImg" src={kidsImg} alt='Picture of class of kids in Tae Kwon Do' />
+          <img className="gridImg" src={kidsImg} alt='Kids in Tae Kwon Do' />
         </div>
       </div>
-    {/*Footer*/}
+
       <Footer />
     </div>
     )
   }
-};
+}

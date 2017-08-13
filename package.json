@@ -1,29 +1,4 @@
 {
-  "name": "TKD",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev:server": "webpack --config webpack.config.server.js --watch",
-    "dev:client": "webpack --config webpack.config.client.js --watch",
-    "dev:start": "nodemon dist/server.js --watch dist/server.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.15.2"
-  },
-  "devDependencies": {
-    "axios": "^0.16.2",
-    "babel-preset-react": "^6.24.1",
-    "express": "^4.15.2",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "babel-core": "^6.24.1",
-    "babel-loader": "^7.0.0",
-    "babel-preset-latest": "^6.24.1",
-    "webpack": "^2.4.1"
-{
   "name": "lookup-server",
   "version": "0.0.1",
   "private": true,
@@ -32,7 +7,6 @@
       "es2015",
       "stage-0"
     ]
-    }
   },
   "dependencies": {
     "babel-core": "6.25.0",
@@ -46,6 +20,7 @@
     "e": "0.0.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-router-dom": "^4.1.2",
     "react-gmaps": "^1.6.0",
     "react-scripts": "1.0.10",
     "react-stripe-checkout": "^2.6.3"
