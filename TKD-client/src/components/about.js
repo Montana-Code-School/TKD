@@ -1,6 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Flexbox from 'flexbox';
+import Footer from './Footer.js';
+import Header from './Header';
 
 class About extends React.Component {
   render (){
@@ -9,7 +10,7 @@ class About extends React.Component {
        <Navbar>
        </NavBar>
         <div>
-          <img src="" alt=group picture/>
+          <img src="" alt="group picture"/>
           <h1 className="about-title"> About </h1>
         </div>
 
@@ -47,7 +48,7 @@ class About extends React.Component {
       </div>
     )
   }
-}
+};
 
 class List extends React.Component {
   render (){
@@ -58,7 +59,7 @@ class List extends React.Component {
       </div>
     }
   }
-}
+};
 
 class Row extends React.Component {
   render (){
@@ -77,6 +78,6 @@ class Row extends React.Component {
      </div>
     }
   }
-}
+};
 
 export default About;
