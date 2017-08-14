@@ -63,12 +63,13 @@ html, body {
 
 .row2column4,
 .row2column5,
-.row2column6 {
+.row2column6,
+.row2column7 {
   display: flex;
   margin-right: 30px;
   align-self: center;
 }
 
-.row2column7 {
+.row2column8 {
   align-self: center;
 }
