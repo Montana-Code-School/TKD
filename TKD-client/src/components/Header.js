@@ -21,8 +21,9 @@ export default class Header extends React.Component {
           <Link to="/Registration"><li className="row2column5">Registration</li></Link>
           <Link to="/Gallery"><li className="row2column6">Gallery</li></Link>
           <Link to="/About"><li className="row2column7">About</li></Link>
+          <Link to="/Resources"><li className="row2column7">Resources</li></Link>
         </ul>
       </header>
     );
   }
-}
+};
