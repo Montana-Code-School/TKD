@@ -17,8 +17,6 @@ export default class Gallery extends React.Component {
     return (
       <div className="container">
 
-        <Header />
-
       <div className="mainImg">
 
       </div>

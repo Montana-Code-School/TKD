@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from './Header';
 import ColoredNav from './ColoredNav';
 import Gmap from './Gmap';
 import headerImg from '../img/homeMainImg.jpg';
@@ -11,9 +10,6 @@ export default class Home extends React.Component {
   render() {
     return (
       <div className='container'>
-    {/*Navbar*/}
-        <Header />
-    {/*Title image and text*/}
         <div className="mainImg">
           <img src={headerImg} alt="Tae Kwon Do class practicing blocking" />
           <div className="mainTitle">
