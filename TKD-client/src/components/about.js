@@ -39,8 +39,8 @@ class About extends React.Component {
           <Flexbox>
            <h2 className="instructor">April C. Trull</h2>
            <p className="bio">Saja Academy was founded in 2007 by Tony Hatzenbuehler in Hamilton , Montana.  It was at that time that April Trull started her journey as a martial artist.  She earned her 1st degree black belt in 2010 and became an assistant
-           instructor that same year.  Six months later April became the Chief Instructor of Saja as it was passed down to her.  The school has served people throughout the Bitterroot Valley, instilling confidence, courage, humility, integrity, respect and courtesy in each of its students.<b>
-           April has dedicated herself to her students and her community, making her goal to reach people of all ages, backgrounds and physical abilities, and teaching them to respect others and give back to their community.</b> </p>
+           instructor that same year.  Six months later April became the Chief Instructor of Saja as it was passed down to her.  The school has served people throughout the Bitterroot Valley, instilling confidence, courage, humility, integrity, respect and courtesy in each of its students.<br>
+           April has dedicated herself to her students and her community, making her goal to reach people of all ages, backgrounds and physical abilities, and teaching them to respect others and give back to their community.</br> </p>
          </Flexbox>
 
         </Flexbox>
