@@ -6,10 +6,16 @@ import Banner from '../img/TKD1.JPG';
 import '../styles/Registration.css';
 
 export default class Registration extends React.Component{
+  constructor(props) {
+    super(props);
+  }
+
   render() {
+    const { isAuthenticated, login } = this.props.auth;
+
+
     return(
       <div>
-        <Header />
           <div className="Container">
             <div className="BannerBox">
               <h1>Registration</h1>
@@ -38,7 +44,10 @@ export default class Registration extends React.Component{
                   With 6 month Commitment $40 / month OR $210 one-time Payment ($60 savings!).</p>
                 </div>
               </div>
-              <Modal />
+              {
+                /*Only allows payments is logged in, otherwise asks for login*/
+                isAuthenticated() ? <Modal /> : <button onClick={login}>Login</button>
+              }
             </div>
           </div>
         <Footer />
