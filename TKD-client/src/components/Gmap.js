@@ -13,7 +13,7 @@ class Gmap extends React.Component {
 
     return (
       <Gmaps className={"featuredMap"}
-        width={'1000px'}
+        width={'1500px'}
         height={'400px'}
         lat={46.5081587}
         lng={-114.0967987}
