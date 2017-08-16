@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 // import Checkout from './components/Checkout';
-//import Registration from './components/Registration.js';
+import Registration from './components/Registration.js';
 import Home from './components/Home.js';
 import About from './components/About.js';
 import Gallery from './components/Gallery.js';
@@ -19,6 +19,7 @@ export default class App extends React.Component {
           <Route path='/gallery' component={Gallery} />
           <Route path='/calendar' component={Calendar} />
           <Route path='/resources' component={Resources} />
+          <Route path='/registration' component={Registration} />
         </div>
     </BrowserRouter>
     );
