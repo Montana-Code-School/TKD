@@ -11,7 +11,6 @@ export default class Header extends React.Component {
         <ul className="row1">
           <li className="row1column1">email@email.com</li>
           <div className="row1column2">
-            <Link to="/FAQ"><li>FAQ</li></Link>
             <Link to="/Registration"><li className="row1column3">PAY YOUR MEMBERSHIP</li></Link>
           </div>
         </ul>
