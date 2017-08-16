@@ -29,11 +29,12 @@ export default class Home extends React.Component {
             <h2>Brother Schools</h2>
             <hr />
               <ul>
-                <li>School 1 Goes Here</li>
-                <li>School 2 Goes Here</li>
-                <li>School 3 Goes Here</li>
-                <li>School 4 Goes Here</li>
-                <li>School 5 Goes Here</li>
+                <li>Parks Martial Arts Academy  1920 Central Ave. Billings, MT 59102  (406)245-8808</li>
+                <li>Cody Martial Arts 502 Ray Rd Cody, WY 82414 (307)527-7613</li>
+                <li>AJF Martial Arts Academy-Ranchester 103 Carl St. Ranchester, WY 82839 (307)655-9761</li>
+                <li>AJF Martial Arts-Sheridan 1030 N Main St. Sheridan, WY 82801 (307)751-5540</li>
+                <li>Parks Martial Arts Academy-Hardin 121 N Mitchell Ave. Hardin, MT 59034 (406)679-1874</li>
+                <li>AJF Martial Arts-Pierre 203 E Sioux Ave Pierre S.Dakota 57501 (605)295-0352</li>
               </ul>
           </div>
           <div className="eventLogContent">

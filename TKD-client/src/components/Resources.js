@@ -1,4 +1,3 @@
-import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Info from '../pdf/info.pdf';
@@ -31,3 +30,4 @@ export default class Resources extends React.Component {
     )
   }
 };
+
