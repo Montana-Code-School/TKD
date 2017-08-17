@@ -13,6 +13,7 @@ export default class Footer extends React.Component{
           <Link to="/Registration"><li>REGISTRATION</li></Link>
           <Link to="/Gallery"><li>GALLERY</li></Link>
           <Link to="/About"><li>ABOUT</li></Link>
+          <Link to="/Resources"><li>RESOURCES</li></Link>
           <li><img src={fbIcon} alt="Link To Saja Facebook Page" /></li>
         </ul>
       </div>

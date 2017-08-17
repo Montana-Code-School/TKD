@@ -35,16 +35,18 @@ export default class Header extends React.Component {
         </ul>
         <ul className="row2">
           <div className="row2column1">
-          <li><img src={navImgOne} alt="" /></li>
-          <li><img src={navImgTwo} alt="" /></li>
+            <li><img src={navImgOne} alt="" /></li>
+            <li><img src={navImgTwo} alt="" /></li>
           </div>
           <div className="row2column2">
-            <Link to="/home"><li>Home</li></Link>
-            <Link to="/calendar"><li>Calendar</li></Link>
-            <Link to="/registration"><li>Registration</li></Link>
-            <Link to="/gallery"><li>Gallery</li></Link>
-            <Link to="/about"><li>About</li></Link>
-            <Link to="/profile"><li>Profile</li></Link>
+
+            <Link to="/"><li>Home</li></Link>
+            <Link to="/Calendar"><li>Calendar</li></Link>
+            <Link to="/Registration"><li>Registration</li></Link>
+            <Link to="/Gallery"><li>Gallery</li></Link>
+            <Link to="/About"><li>About</li></Link>
+            <Link to="/Resources"><li>Resources</li></Link>
+
           </div>
         </ul>
       </header>
