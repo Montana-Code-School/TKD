@@ -3,7 +3,7 @@ import './App.css';
 // import Checkout from './components/Checkout';
 import Registration from './components/Registration.js';
 import Home from './components/Home.js';
-import About from './components/about.js';
+import About from './components/About.js';
 import Gallery from './components/Gallery.js';
 import Calendar from './components/Calendar.js';
 import Resources from './components/Resources.js';
