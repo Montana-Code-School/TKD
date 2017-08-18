@@ -4,7 +4,12 @@ import './index.css';
 import App from './App';
 import Calendar from './components/Calendar';
 import registerServiceWorker from './registerServiceWorker';
+import { makeMainRoutes } from './routes';
+
+const routes = makeMainRoutes();
 
 ReactDOM.render(
-  <App/>, document.getElementById('root'));
+  routes,
+  document.getElementById('root')
+);
 registerServiceWorker();

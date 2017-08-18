@@ -2,18 +2,26 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Modal from './modal';
-import Banner from '../img/TKD1.JPG';
+import Banner from '../img/registration_MainImg.jpg';
 import '../styles/Registration.css';
 
 export default class Registration extends React.Component{
+  constructor(props) {
+    super(props);
+  }
+
   render() {
+    const { isAuthenticated, login } = this.props.auth;
+
+
     return(
       <div>
-        <Header />
-          <div className="Container">
-            <div className="BannerBox">
-              <h1>Registration</h1>
-              <img className="Banner" src={Banner} />
+        <div>
+            <div className="MainImg">
+              <img src={Banner} alt="Tae Kwon Do class huddling" />
+              <div className="MainTitle">
+                <h1>Registration</h1>
+              </div>
             </div>
             <div className="FeeBox">
               <div className="FeeInfoFormatTop">
@@ -38,7 +46,10 @@ export default class Registration extends React.Component{
                   With 6 month Commitment $40 / month OR $210 one-time Payment ($60 savings!).</p>
                 </div>
               </div>
-              <Modal />
+              {
+                /*Only allows payments is logged in, otherwise asks for login*/
+                isAuthenticated() ? <Modal /> : <button className="LoginBtn" onClick={login}>Login</button>
+              }
             </div>
           </div>
         <Footer />

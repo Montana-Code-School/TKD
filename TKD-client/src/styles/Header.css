@@ -86,3 +86,6 @@ header.navContainer {
   justify-content: flex-end;
   padding-top: 1.8em;
 }
+.LoginLi {
+  cursor: pointer;
+}
