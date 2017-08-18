@@ -34,17 +34,26 @@ export default class Gallery extends React.Component {
       </div>
 
       <div className="gridImg">
-        <img src={staffsImg} alt='Kids with staffs' />
-        <img src={swordImg1} alt='Kids with swords' />
-        <img src={swordImg2} alt='Kids with more swords' />
+        <div className="smImg">
+          <img src={staffsImg} alt='Kids with staffs' />
+          <img src={swordImg1} alt='Kids with swords' />
+        </div>
       </div>
 
       <div className="gridImg">
-        <img src={inLineImg} alt='Tae Kwon Do class standing in line' />
-        <img src={lungeImg} alt='Tae Kwon Do class doing lunges'/>
-        <img src={kidsImg} alt='Kids in Tae Kwon Do' />
+        <div className="smImg">
+          <img src={inLineImg} alt='Tae Kwon Do class standing in line' />
+          <img src={lungeImg} alt='Tae Kwon Do class doing lunges'/>
+        </div>
       </div>
 
+      <div className="gridImg">
+        <div className="smImg">
+          <img src={swordImg2} alt='Kids with more swords' />
+          <img src={kidsImg} alt='Kids in Tae Kwon Do' />
+        </div>
+      </div>
+        
       <Footer />
     </div>
     )
