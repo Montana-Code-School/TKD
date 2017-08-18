@@ -57,7 +57,9 @@ h2 {
   justify-content: space-around;
 }
 
-.smImg {
-  width: 100px;
-  height: 100px;
+
+.smImg img {
+  width: 650px;
+  height: 400px;
+  padding-left: 2em;
 }

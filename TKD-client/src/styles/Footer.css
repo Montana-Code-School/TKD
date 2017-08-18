@@ -12,6 +12,11 @@ html, body {
   padding: 0px;
 }
 
+.navContainer a {
+  color: white;
+  text-decoration: none;
+}
+
 .footerNav {
   display: flex;
   flex: auto;
