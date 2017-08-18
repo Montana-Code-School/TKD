@@ -11,6 +11,7 @@ import swordImg2 from '../img/class_photo_6_with_swords_2.jpg';
 import inLineImg from '../img/class_photo_8_in_line.jpg';
 import lungeImg from '../img/class_photo_9_lunge.jpg';
 import kidsImg from '../img/class_photo_7_kids.jpg';
+import '../styles/Gallery.css';
 
 export default class Gallery extends React.Component {
   render () {
@@ -18,44 +19,30 @@ export default class Gallery extends React.Component {
       <div className="container">
 
       <div className="mainImg">
-
+        <img src={kicksImg} alt='Tae Kwon Do kids doing kicks' />
       </div>
+
+      <div className="mainTitle">
         <h1>Gallery</h1>
+      </div>
 
-      <div>
-        <div>
-          <img className="gridImg" src={kicksImg} alt='Tae Kwon Do kids doing kicks' />
-        </div>
-        <div>
-          <img className="gridImg" src={classImg1} alt='Taw Kwon Do kids in class together' />
-        </div>
-        <div>
-          <img className="gridImg" src={classImg3} alt='Taw Kwon Do kids in class together' />
+      <div className="gridImg">
+        <div className="smImg">
+          <img src={classImg1} alt='Tae Kwon Do kids in class together' />
+          <img src={classImg3} alt='Tae Kwon Do kids in class together' />
         </div>
       </div>
 
-      <div>
-        <div>
-          <img className="gridImg" src={staffsImg} alt='Kids with staffs' />
-        </div>
-        <div>
-          <img className="gridImg" src={swordImg1} alt='Kids with swords' />
-        </div>
-        <div>
-          <img className="gridImg" src={swordImg2} alt='Kids with more swords' />
-        </div>
+      <div className="gridImg">
+        <img src={staffsImg} alt='Kids with staffs' />
+        <img src={swordImg1} alt='Kids with swords' />
+        <img src={swordImg2} alt='Kids with more swords' />
       </div>
 
-      <div>
-        <div>
-          <img className="gridImg" src={inLineImg} alt='Tae Kwon Do class standing in line' />
-        </div>
-        <div>
-          <img className="gridImg" src={lungeImg} alt='Tae Kwon Do class doing lunges'/>
-        </div>
-        <div>
-          <img className="gridImg" src={kidsImg} alt='Kids in Tae Kwon Do' />
-        </div>
+      <div className="gridImg">
+        <img src={inLineImg} alt='Tae Kwon Do class standing in line' />
+        <img src={lungeImg} alt='Tae Kwon Do class doing lunges'/>
+        <img src={kidsImg} alt='Kids in Tae Kwon Do' />
       </div>
 
       <Footer />
