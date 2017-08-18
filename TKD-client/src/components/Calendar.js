@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from './Header';
 import Footer from './Footer.js';
 import moment from 'moment';
 import BigCalendar from 'react-big-calendar';
@@ -9,7 +8,7 @@ import {getEvents, calendarUrls} from '../gcalendar';
 
 BigCalendar.setLocalizer(BigCalendar.momentLocalizer(moment));
 
-class App extends React.Component {
+export default class Calendar extends React.Component {
   constructor() {
     super();
 
@@ -82,7 +81,6 @@ class App extends React.Component {
         </form>
         <div className="calendar">
           {/* Navbar */}
-          <Header/> {/*Title image and text*/}
           <h1>EVENTS CALENDAR</h1>
           {/*body*/}
           <BigCalendar popup selectable events={this.state.events} eventPropGetter={this.eventColor} onSelectEvent={event => console.log(event.title)} views={['month', 'week', 'day']}/> {/*Footer*/}
@@ -92,5 +90,3 @@ class App extends React.Component {
     )
   }
 };
-
-export default App;
