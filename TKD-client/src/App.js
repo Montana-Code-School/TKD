@@ -11,6 +11,7 @@ import {BrowserRouter, Route, Redirect} from 'react-router-dom';
 import { Navbar, Button } from 'react-bootstrap';
 
 
+
 export default class App extends Component {
   goTo(route) {
     this.props.history.replace(`/${route}`)
