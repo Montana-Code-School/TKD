@@ -40,11 +40,11 @@ export default class Header extends React.Component {
           </div>
           <div className="row2column2">
 
-            <Link to="/"><li>Home</li></Link>
+            <Link to="/Home"><li>Home</li></Link>
             <Link to="/Calendar"><li>Calendar</li></Link>
             <Link to="/Registration"><li>Registration</li></Link>
             <Link to="/Gallery"><li>Gallery</li></Link>
-            <Link to="/About"><li>About</li></Link>
+            <Link to="/about"><li>About</li></Link>
             <Link to="/Resources"><li>Resources</li></Link>
 
           </div>
