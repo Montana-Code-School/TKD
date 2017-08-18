@@ -14,6 +14,24 @@ import kidsImg from '../img/class_photo_7_kids.jpg';
 import '../styles/Gallery.css';
 
 export default class Gallery extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      toggleSize: false,
+      largeImgClass: ""
+    }
+
+  }
+
+  changeSize() {
+    console.log("working");
+    this.setState = ({
+      toggleSize: !this.state.toggleSize,
+      largeImgClass: "largeImg"
+    });
+  }
+
   render () {
     return (
       <div className="container">
@@ -42,7 +60,7 @@ export default class Gallery extends React.Component {
 
       <div className="gridImg">
         <div className="smImg">
-          <img src={inLineImg} alt='Tae Kwon Do class standing in line' />
+          <img onClick={this.changeSize.bind(this)} className="largeImg" src={inLineImg} alt='Tae Kwon Do class standing in line' />
           <img src={lungeImg} alt='Tae Kwon Do class doing lunges'/>
         </div>
       </div>
@@ -53,7 +71,7 @@ export default class Gallery extends React.Component {
           <img src={kidsImg} alt='Kids in Tae Kwon Do' />
         </div>
       </div>
-        
+
       <Footer />
     </div>
     )
