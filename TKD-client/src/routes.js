@@ -9,7 +9,7 @@ import Callback from './CallBack/Callback';
 import Registration from './components/Registration';
 import Calendar from './components/Calendar';
 import Gallery from './components/Gallery';
-import About from './components/About';
+import About from './components/about';
 import Auth from './Auth/Auth';
 import history from './history';
 import Profile from './components/Profile';
