@@ -5,10 +5,13 @@ import Info from '../pdf/info.pdf';
 import Application from '../pdf/application.pdf';
 
 export default class Resources extends React.Component {
-  render (){
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
     return (
       <div className="container">
-        <Header />
         <h1>RESOURCES</h1>
         <div>
           <p>DOWNLOAD INFORMATION</p><br/>
@@ -24,6 +27,6 @@ export default class Resources extends React.Component {
         </div>
         <Footer />
       </div>
-    )
+    );
   }
-};
+}
