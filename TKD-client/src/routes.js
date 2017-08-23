@@ -7,6 +7,7 @@ import Home from './components/Home';
 import Header from './components/Header'; //now top level component
 import Callback from './CallBack/Callback';
 import Registration from './components/Registration';
+import Resources from './components/Resources';
 import Calendar from './components/Calendar';
 import Gallery from './components/Gallery';
 import About from './components/about';
@@ -34,6 +35,7 @@ export const makeMainRoutes = () => {
         <Route path="/calendar"     render={(props) => <Calendar {...props} />} />
         <Route path="/gallery"      render={(props) => <Gallery {...props} />} />
         <Route path="/about"        render={(props) => <About {...props }/>} />
+        <Route path="/resources"    render={(props) => <Resources {...props}/>} />
         <Route path="/profile"      render={(props) => <Profile auth={auth} {...props} />} />
         <Route path="/callback"     render={(props) => {
           handleAuthentication(props);
