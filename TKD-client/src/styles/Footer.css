@@ -21,7 +21,7 @@ html, body {
   display: flex;
   flex: auto;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   list-style: none;
   padding: 1em 8%;
@@ -29,4 +29,14 @@ html, body {
   background-color: #000000;
   color: white;
   text-decoration: none;
+  margin: 0;
+}
+
+.footerNav li {
+  padding-left: 1.2em;
+  font-size: 14px;
+}
+
+.footerNav img {
+  width: 50%;
 }

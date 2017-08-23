@@ -8,7 +8,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script');  /* Import "Kaushan Script" google font */
 
-body {
+body, html {
   font-family: Helvetica;  /* Helvetica for all type throughout site, except h1 tags */
   width: 100%;
 }
@@ -51,16 +51,27 @@ h2 {
   font-size: 32px;
 }
 
-.aboutContentSection {
+.aboutSection {
+  width: 100%;
+}
+
+.aboutContentSection1 {
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding: 2em 8%;
 }
 
-.aboutContentSection p {
+.aboutContentSection2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2em 8%;
+}
+
+.aboutContentSection1 p, .aboutContentSection2 p {
   text-align: left;
-  font-size: 1.3em;
+  font-size: 18px;
   line-height: 1.5em;
   margin: 0;
 }
