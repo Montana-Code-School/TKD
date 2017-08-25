@@ -2,8 +2,15 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import '../styles/Footer.css';
 import fbIcon from '../img/footer_faceBookIcon.png';
+import axios from "axios";
 
 export default class Footer extends React.Component{
+  componentDidMount(){
+    axios.get("http://localhost:3001/student").then(res => {
+      console.log(res.data);
+    })
+  }
+
   render() {
     return (
       <div className="navContainer">
