@@ -11,52 +11,64 @@ import swordImg2 from '../img/class_photo_6_with_swords_2.jpg';
 import inLineImg from '../img/class_photo_8_in_line.jpg';
 import lungeImg from '../img/class_photo_9_lunge.jpg';
 import kidsImg from '../img/class_photo_7_kids.jpg';
+import '../styles/Gallery.css';
 
 export default class Gallery extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      toggleSize: false,
+      largeImgClass: ""
+    }
+
+  }
+
+  changeSize() {
+    console.log("working");
+    this.setState = ({
+      toggleSize: !this.state.toggleSize,
+      largeImgClass: "largeImg"
+    });
+  }
+
   render () {
     return (
       <div className="container">
 
-        <Header />
-
       <div className="mainImg">
-
+        <img src={kicksImg} alt='Tae Kwon Do kids doing kicks' />
       </div>
+
+      <div className="mainTitle">
         <h1>Gallery</h1>
+      </div>
 
-      <div>
-        <div>
-          <img className="gridImg" src={kicksImg} alt='Tae Kwon Do kids doing kicks' />
-        </div>
-        <div>
-          <img className="gridImg" src={classImg1} alt='Taw Kwon Do kids in class together' />
-        </div>
-        <div>
-          <img className="gridImg" src={classImg3} alt='Taw Kwon Do kids in class together' />
+      <div className="gridImg">
+        <div className="smImg">
+          <img src={classImg1} alt='Tae Kwon Do kids in class together' />
+          <img src={classImg3} alt='Tae Kwon Do kids in class together' />
         </div>
       </div>
 
-      <div>
-        <div>
-          <img className="gridImg" src={staffsImg} alt='Kids with staffs' />
-        </div>
-        <div>
-          <img className="gridImg" src={swordImg1} alt='Kids with swords' />
-        </div>
-        <div>
-          <img className="gridImg" src={swordImg2} alt='Kids with more swords' />
+      <div className="gridImg">
+        <div className="smImg">
+          <img src={staffsImg} alt='Kids with staffs' />
+          <img src={swordImg1} alt='Kids with swords' />
         </div>
       </div>
 
-      <div>
-        <div>
-          <img className="gridImg" src={inLineImg} alt='Tae Kwon Do class standing in line' />
+      <div className="gridImg">
+        <div className="smImg">
+          <img onClick={this.changeSize.bind(this)} className="largeImg" src={inLineImg} alt='Tae Kwon Do class standing in line' />
+          <img src={lungeImg} alt='Tae Kwon Do class doing lunges'/>
         </div>
-        <div>
-          <img className="gridImg" src={lungeImg} alt='Tae Kwon Do class doing lunges'/>
-        </div>
-        <div>
-          <img className="gridImg" src={kidsImg} alt='Picture of class of kids in Tae Kwon Do' />
+      </div>
+
+      <div className="gridImg">
+        <div className="smImg">
+          <img src={swordImg2} alt='Kids with more swords' />
+          <img src={kidsImg} alt='Kids in Tae Kwon Do' />
         </div>
       </div>
 

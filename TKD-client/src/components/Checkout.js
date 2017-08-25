@@ -10,6 +10,7 @@ const fromDollarToCent = amount => amount * 100;
 
 const successPayment = data => {
   alert('Payment Successful');
+
 };
 
 const errorPayment = data => {
@@ -26,8 +27,53 @@ const onToken = (amount, description) => token =>
   .then(successPayment)
   .catch(errorPayment);
 
-  const Checkout = ({name, description, amount }) =>
-    <StripeCheckout
+  const Checkout = ({payBy, type }) => {
+    let name='No Payment Plan has been Selected';
+    let description = 'Please close this window and select a payment plan';
+    let amount = 0;
+
+    switch(type) {
+      default:
+        type="OneTimePayment";
+        break;
+      case 'OneTimePayment':
+        name = "One Time Membership Fee";
+        description= '$65 Per Person';   //Need to ask april what to say here
+        amount=65
+        break;
+    case 'Family':
+      if (payBy === 'PayInFull') {
+        name = 'Family 6 Month Paid in Full';
+        description= '$210 ($60 Savings!)';
+        amount = 210;
+      } else if (payBy === 'CommitSix') {
+        name = 'Family 6 Month Commitment';
+        description= '$40 ($30 Savings!)';
+        amount = 40;
+      }else {
+        name="Family Month-to-Month Payment";
+        description='$45'
+        amount=45
+      }
+      break;
+    case 'Individual':
+      if (payBy === 'PayInFull') {
+        name = 'Individual 6 Month Paid in Full';
+        description= '$150 ($60 Savings!)';
+        amount = 150;
+      } else if (payBy === 'CommitSix') {
+        name = 'Individual 6 Month Commitment';
+        description= '$30 ($30 Savings!)';
+        amount = 30;
+      }else {
+        name="Individual Month-to-Month Payment";
+        description='$35'
+        amount=35
+      }
+      break;
+    }
+
+  return(  <StripeCheckout
       name={name}
       description={description}
       amount={fromDollarToCent(amount)}
@@ -35,5 +81,7 @@ const onToken = (amount, description) => token =>
       currency={CURRENCY}
       stripeKey={STRIPE_PUBLISHABLE}
     />
+  );
+  }
 
     export default Checkout;

@@ -5,24 +5,52 @@ import navImgTwo from '../img/Jungdo.png';
 import '../styles/Header.css';
 
 export default class Header extends React.Component {
+  goTo(route) {
+    this.props.history.replace(`/${route}`)
+  }
+
+  login() {
+    this.props.auth.login();
+  }
+
+  logout() {
+    this.props.auth.logout();
+  }
+
   render() {
+    console.log(this.props.auth);
+    const { isAuthenticated } = this.props.auth;
+
     return (
       <header className="navContainer">
         <ul className="row1">
           <li className="row1column1">email@email.com</li>
-          <Link to="/FAQ"><li className="row1column2">FAQ</li></Link>
-          <Link to="/Registration"><li className="row1column3">PAY YOUR MEMBERSHIP</li></Link>
+          <div className="row1column2">
+            <Link to="/Registration">
+              <li>PAY YOUR MEMBERSHIP</li>
+            </Link>
+              {
+                isAuthenticated() ? <li className="LoginLi" onClick={this.logout.bind(this)}>LOGOUT</li> : <li className="LoginLi" onClick={this.login.bind(this)}>LOGIN</li>
+              }
+          </div>
         </ul>
         <ul className="row2">
-          <li className="row2column1"><img src={navImgOne} alt="" /></li>
-          <li className="row2column2"><img src={navImgTwo} alt="" /></li>
-          <Link to="/"><li className="row2column3">Home</li></Link>
-          <Link to="/Calendar"><li className="row2column4">Calendar</li></Link>
-          <Link to="/Registration"><li className="row2column5">Registration</li></Link>
-          <Link to="/Gallery"><li className="row2column6">Gallery</li></Link>
-          <Link to="/About"><li className="row2column7">About</li></Link>
+          <div className="row2column1">
+            <li><img src={navImgOne} alt="" /></li>
+            <li><img src={navImgTwo} alt="" /></li>
+          </div>
+          <div className="row2column2">
+
+            <Link to="/Home"><li>Home</li></Link>
+            <Link to="/Calendar"><li>Calendar</li></Link>
+            <Link to="/Registration"><li>Registration</li></Link>
+            <Link to="/Gallery"><li>Gallery</li></Link>
+            <Link to="/about"><li>About</li></Link>
+            <Link to="/Resources"><li>Resources</li></Link>
+
+          </div>
         </ul>
       </header>
     );
   }
-}
+};
