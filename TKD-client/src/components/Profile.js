@@ -11,14 +11,18 @@ export default class Profile extends React.Component {
   }
 
   componentDidMount(){
-    // axios.get("http://localhost:3001/student").then(res => {
-    //   console.log(res.data);
-    // })
+    if(this.state.profile.name) {
+    axios.get("http://localhost:3001/api/student/" + this.state.profile.name)
+    .then(res => {
+      console.log(res.data);
+    });
+  }
   }
 
   componentWillMount() {
   this.setState({ profile: {} });
   const { userProfile, getProfile } = this.props.auth;
+
   if (!userProfile) {
     getProfile((err, profile) => {
       this.setState({ profile });
@@ -31,13 +35,16 @@ export default class Profile extends React.Component {
 // return isAuthenticated() ? <div>This is the profile Page</div> : <button onClick={login}>Please Login to View Content</button>
 
   render() {
+    console.log(this.state.profile);
     const { isAuthenticated } = this.props.auth;
     // const { isAuthenticated, login } = this.props.auth;
     return(
       <div>
+      {console.log(this.state.profile)}
       <h1>{this.state.profile.sub}</h1>
       <h2>{this.state.profile.name}</h2>
       </div>
   );
   }
+
 }
