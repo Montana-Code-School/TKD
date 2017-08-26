@@ -6,9 +6,7 @@ import axios from "axios";
 
 export default class Footer extends React.Component{
   componentDidMount(){
-    axios.get("http://localhost:3001/student").then(res => {
-      console.log(res.data);
-    })
+    
   }
 
   render() {
