@@ -5,6 +5,12 @@ const app = express();
 
 const port = 3001;
 
+app.use((req, res, next) =>{
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 // Express only serves static assets in production
 console.log("NODE_ENV: ", process.env.NODE_ENV);
 if (process.env.NODE_ENV === 'production') {
@@ -37,7 +43,7 @@ const connection = mysql.createConnection({
 
 
 connection.connect();
-app.get('/students', (req, res) => {
+app.get('/student', (req, res) => {
 
 
   const queryString = "SELECT * FROM saja_academy.student";
