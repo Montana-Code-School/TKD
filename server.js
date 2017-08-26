@@ -62,7 +62,19 @@ app.get('/student', (req, res) => {
  //res.json({SELECT * FROM saja_academy.student;});
 });
 
+app.get('/student/:studentemail', (req, res) => {
+  const queryString = "SELECT * FROM saja_academy.user WHERE email="+ connection.escape(req.params.studentemail);
 
+  connection.query(queryString, function(err, rows, fields) {
+    if(err) throw err;
+
+    for (var i in rows) {
+      console.log("name " + rows[i].name);
+
+    }
+    res.json({rows});
+  });
+});
 //   const firstName = req.query.firstName;
 //
 //   if (!firstName) {
