@@ -58,8 +58,6 @@ app.get('/student', (req, res) => {
     res.json({rows});
   });
 
-  //pool.end();
- //res.json({SELECT * FROM saja_academy.student;});
 });
 
 app.get('/student/:studentemail', (req, res) => {
@@ -75,42 +73,6 @@ app.get('/student/:studentemail', (req, res) => {
     res.json({rows});
   });
 });
-//   const firstName = req.query.firstName;
-//
-//   if (!firstName) {
-//     res.json({
-//       error: 'Missing required parameters',
-//     });
-//     return;
-//   }
-//
-//   let queryString = ``;
-//   if(firstName=="*"){
-//     queryString = `SELECT * from authors`
-//   }else{
-//      queryString = `SELECT * from authors WHERE first_name REGEXP '^${firstName}'`
-//   }
-//
-//   pool.query(queryString,
-//          function(err, rows, fields) {
-//           if (err) throw err;
-//
-//           if (rows.length > 0){
-//             res.json(
-//               rows.map((entry) => {
-//                 const e = {};
-//                 COLUMNS.forEach((c) => {
-//                   e[c] = entry[c];
-//                 });
-//                 return e;
-//                 })
-//               );
-//             } else {
-//               res.json([]);
-//             }
-//       });
-//
-// });
 
 app.listen(port, () => {
   console.log(`Find the server at: http://localhost:${port}/`); // eslint-disable-line no-console
