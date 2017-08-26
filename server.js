@@ -3,7 +3,7 @@ const fs = require('fs');
 const mysql = require('mysql');
 const app = express();
 
-app.set('port', (process.env.PORT || 3001));
+const port = 3001;
 
 // Express only serves static assets in production
 console.log("NODE_ENV: ", process.env.NODE_ENV);
@@ -18,11 +18,11 @@ if (process.env.NODE_ENV === 'production') {
 
 const host = "localhost"
 const user = "root"
-const pswd = ""
-const dbname = ""
+const pswd = "13fuzzybunnys"
+const dbname = "saja_academy"
 
 // config db ====================================
-const pool = mysql.createPool({
+const connection = mysql.createConnection({
   host: host,
   user: user,
   password: pswd,
@@ -30,50 +30,70 @@ const pool = mysql.createPool({
   database: dbname
 });
 
-const COLUMNS = [
-  'last_name',
-  'first_name'
-];
+// const COLUMNS = [
+//   'last_name',
+//   'first_name'
+// ];
 
-app.get('/api/books', (req, res) => {
 
-  const firstName = req.query.firstName;
+connection.connect();
+app.get('/students', (req, res) => {
 
-  if (!firstName) {
-    res.json({
-      error: 'Missing required parameters',
-    });
-    return;
-  }
 
-  let queryString = ``;
-  if(firstName=="*"){
-    queryString = `SELECT * from authors`
-  }else{
-     queryString = `SELECT * from authors WHERE first_name REGEXP '^${firstName}'`
-  }
+  const queryString = "SELECT * FROM saja_academy.student";
 
-  pool.query(queryString,
-         function(err, rows, fields) {
-          if (err) throw err;
+  connection.query(queryString, function(err, rows, fields) {
+    if(err) throw err;
 
-          if (rows.length > 0){
-            res.json(
-              rows.map((entry) => {
-                const e = {};
-                COLUMNS.forEach((c) => {
-                  e[c] = entry[c];
-                });
-                return e;
-                })
-              );
-            } else {
-              res.json([]);
-            }
-      });
+    for (var i in rows) {
+      console.log("name " + rows[i].name);
 
+    }
+    res.json({rows});
+  });
+
+  //pool.end();
+ //res.json({SELECT * FROM saja_academy.student;});
 });
 
-app.listen(app.get('port'), () => {
-  console.log(`Find the server at: http://localhost:${app.get('port')}/`); // eslint-disable-line no-console
+
+//   const firstName = req.query.firstName;
+//
+//   if (!firstName) {
+//     res.json({
+//       error: 'Missing required parameters',
+//     });
+//     return;
+//   }
+//
+//   let queryString = ``;
+//   if(firstName=="*"){
+//     queryString = `SELECT * from authors`
+//   }else{
+//      queryString = `SELECT * from authors WHERE first_name REGEXP '^${firstName}'`
+//   }
+//
+//   pool.query(queryString,
+//          function(err, rows, fields) {
+//           if (err) throw err;
+//
+//           if (rows.length > 0){
+//             res.json(
+//               rows.map((entry) => {
+//                 const e = {};
+//                 COLUMNS.forEach((c) => {
+//                   e[c] = entry[c];
+//                 });
+//                 return e;
+//                 })
+//               );
+//             } else {
+//               res.json([]);
+//             }
+//       });
+//
+// });
+
+app.listen(port, () => {
+  console.log(`Find the server at: http://localhost:${port}/`); // eslint-disable-line no-console
 });
