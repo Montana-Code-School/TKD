@@ -18,13 +18,14 @@ export default class Header extends React.Component {
   }
 
   render() {
-    
+
     const { isAuthenticated } = this.props.auth;
+    const email = localStorage.getItem('email');
 
     return (
       <header className="navContainer">
         <ul className="row1">
-          <li className="row1column1">email@email.com</li>
+          <li className="row1column1">{email}</li>
           <div className="row1column2">
             <Link to="/Registration">
               <li>PAY YOUR MEMBERSHIP</li>
