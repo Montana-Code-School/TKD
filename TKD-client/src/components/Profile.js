@@ -43,7 +43,7 @@ export default class Profile extends React.Component {
         <h1>{user.name}</h1>
         <h4>{user.belt_id}</h4>
         <h4>{user.last_test_date}</h4>
-        <h4>potatoes are freaking awesome</h4>
+        <h4></h4>
       </div>
     )}
   }

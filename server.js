@@ -63,22 +63,27 @@ app.get('/student', (req, res) => {
 });
 
 app.get('/student/:studentemail', (req, res) => {
-  console.log(JSON.stringify(connection.escape(req.params.studentemail)));
-  console.log("hello");
+
   //const queryString = "SELECT * FROM saja_academy.user WHERE email="+ connection.escape(req.params.studentemail);
 
-  const queryString = "SELECT * FROM user LEFT JOIN student ON user.id = student.user_id AND user.email ="+connection.escape(req.params.studentemail);
+  const studentQuery = "SELECT student.id FROM saja_academy.student WHERE student.user_id "
+  const userQuery = "SELECT  user.id FROM saja_academy.user WHERE user.email =" + connection.escape(req.params.studentemail);
+  //const queryString = "SELECT * FROM user LEFT JOIN student ON user.id = student.user_id AND user.email ="+connection.escape(req.params.studentemail);
   // gets all users, but we need students
   // LEFT JOIN table2 ON table1.column_name = table2.column_name;
   //
-  connection.query(queryString, function(err, rows, fields) {
-    if(err) throw err;
+  connection.query(userQuery, function(err, result, fields) {
 
-    for (var i in rows) {
-      console.log("name " + rows[i].name);
+    if(!result){
+      console.log("no current query");
 
     }
-    res.json({rows});
+
+    else {
+
+      console.log (result[0].data);
+    }
+
   });
 });
 //   const firstName = req.query.firstName;
