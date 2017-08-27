@@ -1,6 +1,7 @@
 import auth0 from 'auth0-js';
 import { AUTH_CONFIG } from './auth0-variables';
 import history from '../history';
+import axios from 'axios';
 
 export default class Auth {
   auth0 = new auth0.WebAuth({
@@ -11,8 +12,6 @@ export default class Auth {
     responseType: 'token id_token',
     scope: 'openid profile'
   });
-
-  userProfile;
 
   constructor() {
     this.login = this.login.bind(this);
@@ -32,6 +31,7 @@ export default class Auth {
       if (authResult && authResult.accessToken && authResult.idToken) {
         this.setSession(authResult);
         history.replace('/home');
+        this.getProfile();
       } else if (err) {
         history.replace('/home');
         console.log(err);
@@ -48,7 +48,7 @@ export default class Auth {
     localStorage.setItem('access_token', authResult.accessToken);
     localStorage.setItem('id_token', authResult.idToken);
     localStorage.setItem('expires_at', expiresAt);
-    // navigate to the home route
+    this.getProfile();
     history.replace('/home');
   }
 
@@ -60,13 +60,15 @@ export default class Auth {
     return accessToken;
   }
 
-  getProfile(cb) {
+  getProfile() {
     let accessToken = this.getAccessToken();
     this.auth0.client.userInfo(accessToken, (err, profile) => {
       if (profile) {
-        this.userProfile = profile;
+        axios.get("http://localhost:3001/student/" + profile.name).then(res => {
+          localStorage.setItem('user_id',res.data.result[0].id);
+          localStorage.setItem('email', profile.name);
+        })
       }
-      cb(err, profile);
     });
   }
 
@@ -75,14 +77,12 @@ export default class Auth {
     localStorage.removeItem('access_token');
     localStorage.removeItem('id_token');
     localStorage.removeItem('expires_at');
-    this.userProfile = null;
-    // navigate to the home route
+    localStorage.removeItem('user_id');
+    localStorage.removeItem('email');
     history.replace('/home');
   }
 
   isAuthenticated() {
-    // Check whether the current time is past the
-    // access token's expiry time
     let expiresAt = JSON.parse(localStorage.getItem('expires_at'));
     return new Date().getTime() < expiresAt;
   }
