@@ -46,7 +46,7 @@ connection.connect();
 app.get('/student', (req, res) => {
 
 
-  const queryString = "SELECT * FROM saja_academy.student";
+  const queryString = "SELECT * FROM saja_academy.user";
 
   connection.query(queryString, function(err, rows, fields) {
     if(err) throw err;
@@ -61,8 +61,14 @@ app.get('/student', (req, res) => {
 });
 
 app.get('/student/:studentemail', (req, res) => {
-  const queryString = "SELECT * FROM saja_academy.user WHERE email="+ connection.escape(req.params.studentemail);
+  console.log(JSON.stringify(connection.escape(req.params.studentemail)));
+  console.log("hello");
+  //const queryString = "SELECT * FROM saja_academy.user WHERE email="+ connection.escape(req.params.studentemail);
 
+  const queryString = "SELECT * FROM user LEFT JOIN student ON user.id = student.user_id AND user.email ="+connection.escape(req.params.studentemail);
+  // gets all users, but we need students
+  // LEFT JOIN table2 ON table1.column_name = table2.column_name;
+  //
   connection.query(queryString, function(err, rows, fields) {
     if(err) throw err;
 
