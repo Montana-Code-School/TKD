@@ -37,6 +37,6 @@ app.get('/student/:studentemail', (req, res) => {
   });
 });
 
-app.listen(port, () => {
+app.listen("https://pure-retreat-21164.herokuapp.com/", () => {
   console.log(`Find the server at: http://localhost:${port}/`); // eslint-disable-line no-console
 });
