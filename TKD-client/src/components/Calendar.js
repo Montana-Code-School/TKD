@@ -28,7 +28,7 @@ export default class Calendar extends React.Component {
         <h1>EVENTS CALENDAR</h1>
         <BigCalendar
           events={this.state.events}
-          style={{height: '500px'}}
+          style={{height: '100%'}}
         />
         <Footer/>
       </div>

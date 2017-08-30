@@ -1,15 +1,10 @@
-import Header from './Header';
 import React from 'react';
 import Footer from './Footer';
 import Info from '../pdf/info.pdf';
 import Application from '../pdf/application.pdf';
-import resources from '../styles/Resources.css';
+import '../styles/Resources.css';
 
 export default class Resources extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className="container">
@@ -25,7 +20,7 @@ export default class Resources extends React.Component {
               <li>Black Belt Examination Application</li>
             </ol>
           </div>
-            <iframe className="pdfs" src={Application} width="45%" height="700" />
+            <iframe title="pdfs" className="pdfs" src={Application} width="45%" height="700" />
           </div>
           <div>
             <p>DOWNLOAD INFORMATION</p><br/>
@@ -45,7 +40,7 @@ export default class Resources extends React.Component {
 
                 </ol>
               </div>
-              <iframe className="pdfs" src={Info} width="45%" height="700" />
+              <iframe title="pdfs" className="pdfs" src={Info} width="45%" height="700" />
             </div>
           </div>
         </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from './Header';
 import Footer from './Footer.js';
 // import galleryImg from ''; /*File pathway for big header picture goes here */
 import kicksImg from '../img/class_photo_2_kicks.jpg';

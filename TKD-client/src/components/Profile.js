@@ -1,5 +1,5 @@
 import React from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import "../styles/profile.css";
 
 export default class Profile extends React.Component {
@@ -15,12 +15,26 @@ export default class Profile extends React.Component {
 
   componentWillMount() {
 
-
+}
 
   getUserTable() {
     // const user = this.state.user[0];
-    const user = [];
-    if(user) {
+    const user = {
+      name:"person",
+      phone: "2077272727272",
+      email: "cplatkuh@gmail.com",
+      ajf_num: 1,
+      belt_id: 2,
+      belt_size: "big",
+      start_date: '11-22-1111',
+      last_test_date: "123-1233-1233",
+      register_date: "11-22-1111",
+      expiration_date: "123-123-123",
+      amount: '65.00',
+      month_to_month: true,
+      family_or_single: 'family'
+    };
+    if(true) {
       return (
         <div className="container">
          <div className="outerTable">
@@ -96,38 +110,21 @@ export default class Profile extends React.Component {
           <table>
               <h3>Attendance</h3>
 
-            
+
           </table>
         </div>
       </div>
     )}
   }
 
-  // getUserTable() {
-  //   const user = this.state.user[0];
-  //   if(user) {
-  //     return (
-  //     <div>
-  //       <h1>{user.name}</h1>
-  //       <h4>{user.belt_id}</h4>
-  //       <h4>{user.last_test_date}</h4>
-  //       <h4></h4>
-  //     </div>
-  //   )}
-  // }
-// return isAuthenticated() ? <div>This is the profile Page</div> : <button onClick={login}>Please Login to View Content</button>
-
   render() {
-    const { userProfile, getProfile } = this.props.auth;
-    if (!userProfile) {
+    const { userProfile, getProfile, isAuthenticated } = this.props.auth;
+    if (!userProfile && isAuthenticated()) {
       getProfile();
-    } 
-    const { isAuthenticated } = this.props.auth;
-    // const { isAuthenticated, login } = this.props.auth;
-    return(
-      <div>
-        {this.props.auth.userProfile}
-      </div>
-    );
+      return this.getUserTable();
+    }
+    else {
+      return <p>Please sign in</p>
+    }
   }
 }

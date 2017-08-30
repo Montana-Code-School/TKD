@@ -2,13 +2,8 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import '../styles/Footer.css';
 import fbIcon from '../img/footer_faceBookIcon.png';
-import axios from "axios";
 
 export default class Footer extends React.Component{
-  componentDidMount(){
-    
-  }
-
   render() {
     return (
       <div className="navContainer">
