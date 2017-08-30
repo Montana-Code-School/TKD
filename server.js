@@ -28,6 +28,24 @@ const connection = mysql.createConnection({
 
 connection.connect();
 
+app.get('/student', (req, res) => {
+
+
+  const queryString = "SELECT * FROM saja_academy.user";
+
+  connection.query(queryString, function(err, rows, fields) {
+    if(err) throw err;
+
+    for (var i in rows) {
+      console.log("name " + rows[i].name);
+
+    }
+    res.json({rows});
+  });
+
+});
+
+
 app.get('/student/:studentemail', (req, res) => {
   const userQuery = "SELECT user.id FROM saja_academy.user WHERE user.email =" + connection.escape(req.params.studentemail);
   connection.query(userQuery, function(err, result, fields) {
