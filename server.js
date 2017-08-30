@@ -1,5 +1,6 @@
 const express = require('express');
 const fs = require('fs');
+const sessions = require('client-sessions');
 const mysql = require('mysql');
 const app = express();
 
@@ -10,17 +11,6 @@ app.use((req, res, next) =>{
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
-
-// Express only serves static assets in production
-console.log("NODE_ENV: ", process.env.NODE_ENV);
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'));
-
-  // Return the main index.html, so react-router render the route in the client
-  app.get('/', (req, res) => {
-    res.sendFile(path.resolve('client/build', 'index.html'));
-  });
-}
 
 const host = "localhost"
 const user = "root"
@@ -36,13 +26,8 @@ const connection = mysql.createConnection({
   database: dbname
 });
 
-// const COLUMNS = [
-//   'last_name',
-//   'first_name'
-// ];
-
-
 connection.connect();
+
 app.get('/student', (req, res) => {
 
 
@@ -60,23 +45,13 @@ app.get('/student', (req, res) => {
 
 });
 
+
 app.get('/student/:studentemail', (req, res) => {
-  console.log(JSON.stringify(connection.escape(req.params.studentemail)));
-  console.log("hello");
-  //const queryString = "SELECT * FROM saja_academy.user WHERE email="+ connection.escape(req.params.studentemail);
-
-  const queryString = "SELECT * FROM user LEFT JOIN student ON user.id = student.user_id AND user.email ="+connection.escape(req.params.studentemail);
-  // gets all users, but we need students
-  // LEFT JOIN table2 ON table1.column_name = table2.column_name;
-  //
-  connection.query(queryString, function(err, rows, fields) {
-    if(err) throw err;
-
-    for (var i in rows) {
-      console.log("name " + rows[i].name);
-
+  const userQuery = "SELECT user.id FROM saja_academy.user WHERE user.email =" + connection.escape(req.params.studentemail);
+  connection.query(userQuery, function(err, result, fields) {
+    if(!err || result.length > 0){
+      res.json({result});
     }
-    res.json({rows});
   });
 });
 
