@@ -1,8 +1,5 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import Calendar from './components/Calendar';
 import registerServiceWorker from './registerServiceWorker';
 import { makeMainRoutes } from './routes';
 

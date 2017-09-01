@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { Route, Router, Redirect } from 'react-router-dom';
-import App from './App';
 import Home from './components/Home';
 import Header from './components/Header'; //now top level component
 import Callback from './CallBack/Callback';

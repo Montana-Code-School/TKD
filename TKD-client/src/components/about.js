@@ -1,7 +1,5 @@
 import React from 'react';
-import Header from './Header';
 import aboutImg from '../img/about_MainImg.jpg';
-import leftImg from '../img/aboutBody_leftImg.jpg';
 import rightImg from '../img/aboutBody_rightImg.jpg';
 import Footer from './Footer.js';
 import AprilImg from '../img/April_Trull.jpg';

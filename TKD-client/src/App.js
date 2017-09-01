@@ -1,13 +1,5 @@
 import React, {Component} from 'react';
 import './App.css';
-// import Checkout from './components/Checkout';
-import Registration from './components/Registration.js';
-import Home from './components/Home.js';
-import About from './components/about.js';
-import Gallery from './components/Gallery.js';
-import Calendar from './components/Calendar.js';
-import Resources from './components/Resources.js';
-import {BrowserRouter, Route, Redirect} from 'react-router-dom';
 import { Navbar, Button } from 'react-bootstrap';
 
 
@@ -26,7 +18,6 @@ export default class App extends Component {
   }
 
   render() {
-    console.log(this.props.auth);
     const { isAuthenticated } = this.props.auth;
 
     return (

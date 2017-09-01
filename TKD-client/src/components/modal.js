@@ -34,7 +34,7 @@ export default class Modal extends React.Component {
         <div className="ModalFormat">
           <div className="Modal">
 
-          <div className="PaymentSpice"><img src={ThankYou} /><h1>Thank You!</h1>
+          <div className="PaymentSpice"><img alt="Thanks" src={ThankYou} /><h1>Thank You!</h1>
           </div>
           <div className="PaymentForm">
           <form className="PaymentForm">

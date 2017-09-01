@@ -1,15 +1,10 @@
 import React from 'react';
-import Header from './Header';
 import Footer from './Footer';
 import Modal from './modal';
 import Banner from '../img/registration_MainImg.jpg';
 import '../styles/Registration.css';
 
 export default class Registration extends React.Component{
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { isAuthenticated, login } = this.props.auth;
 
