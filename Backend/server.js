@@ -4,7 +4,6 @@ const sessions = require('client-sessions');
 const mysql = require('mysql');
 const app = express();
 
-const port = 3001;
 
 app.use((req, res, next) =>{
   res.header("Access-Control-Allow-Origin", "*");
@@ -12,10 +11,10 @@ app.use((req, res, next) =>{
   next();
 });
 
-const host = "localhost"
-const user = "root"
-const pswd = "13fuzzybunnys"
-const dbname = "saja_academy"
+const host = "us-cdbr-iron-east-05.cleardb.net"
+const user = "b950c751139083"
+const pswd = "460b17d4"
+const dbname = "heroku_9f0c20bb2fdcf0f"
 
 // config db ====================================
 const connection = mysql.createConnection({
@@ -47,7 +46,7 @@ app.get('/student', (req, res) => {
 
 
 app.get('/student/:studentemail', (req, res) => {
-  const userQuery = "SELECT user.id FROM saja_academy.user WHERE user.email =" + connection.escape(req.params.studentemail);
+  const userQuery = "SELECT user.id FROM heroku_9f0c20bb2fdcf0f.user WHERE user.email =" + connection.escape(req.params.studentemail);
   connection.query(userQuery, function(err, result, fields) {
     if(!err || result.length > 0){
       res.json({result});
@@ -55,6 +54,7 @@ app.get('/student/:studentemail', (req, res) => {
   });
 });
 
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`Find the server at: http://localhost:${port}/`); // eslint-disable-line no-console
 });
