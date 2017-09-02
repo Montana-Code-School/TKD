@@ -1,8 +1,8 @@
 {
   "name": "lookup-server",
   "version": "0.0.1",
-  "engines":{
-    "node":"8.4.0"
+  "engines": {
+    "node": "8.4.0"
   },
   "private": true,
   "babel": {

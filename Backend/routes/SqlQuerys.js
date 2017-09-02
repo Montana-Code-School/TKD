@@ -1,9 +1,9 @@
 const mysql = require('mysql');
 
 const host = "us-cdbr-iron-east-05.cleardb.net"
-const user = "b950c751139083"
-const pswd = "460b17d4"
-const dbname = "heroku_9f0c20bb2fdcf0f"
+const user = "b82708b72f397b"
+const pswd = "171489ac"
+const dbname = "heroku_92af27f11107b0b"
 
 // config db ====================================
 const connection = mysql.createConnection({
@@ -18,7 +18,7 @@ connection.connect();
 
 const getStudent = app => {
   app.get('/student/:studentemail', (req, res) => {
-    const userQuery = "SELECT user.id FROM heroku_9f0c20bb2fdcf0f.user WHERE user.email =" + connection.escape(req.params.studentemail);
+    const userQuery = "SELECT user.id FROM heroku_92af27f11107b0b.user WHERE user.email =" + connection.escape(req.params.studentemail);
     connection.query(userQuery, function(err, result, fields) {
       if(!err || result.length > 0){
         res.json({result});
