@@ -4,7 +4,7 @@ const sessions = require('client-sessions');
 const mysql = require('mysql');
 const app = express();
 
-const port = 3001;
+
 
 app.use((req, res, next) =>{
   res.header("Access-Control-Allow-Origin", "*");
