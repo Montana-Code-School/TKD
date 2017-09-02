@@ -24,7 +24,8 @@
     "react-gmaps": "^1.6.0",
     "react-router-dom": "^4.1.2",
     "react-scripts": "1.0.10",
-    "react-stripe-checkout": "^2.6.3"
+    "react-stripe-checkout": "^2.6.3",
+    "stripe": "^4.24.1"
   },
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
