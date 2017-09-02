@@ -2,8 +2,8 @@ const express = require('express');
 
 const SERVER_CONFIGS = require('./constants/server');
 
-const configureServer = require('./serverConfig');
-const configureRoutes = require('./routes/index');
+import { configureServer } from './serverConfig';
+import  { configureRoutes } from './routes/index';
 
 const app = express();
 
