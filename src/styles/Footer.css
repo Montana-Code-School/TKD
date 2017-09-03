@@ -1,0 +1,42 @@
+html, body {
+  height: 100%;
+  font-family: Helvetica;
+}
+
+.navContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  flex: 0 0 20px;
+  padding: 0px;
+}
+
+.footerNav a {
+  color: white;
+  text-decoration: none;
+}
+
+.footerNav {
+  display: flex;
+  flex: auto;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 1em 8%;
+  font-size: larger;
+  background-color: #000000;
+  color: white;
+  text-decoration: none;
+  margin: 0;
+}
+
+.footerNav li {
+  padding-left: 1.2em;
+  font-size: 14px;
+}
+
+.footerNav img {
+  width: 50%;
+}

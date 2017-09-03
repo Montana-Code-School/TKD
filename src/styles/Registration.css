@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+
+body {
+  font-family: Helvetica;  /* Helvetica for all type throughout site, except h1 tags */
+  width: 100%;
+}
+
+.MainImg {
+  position: relative;
+  width: 100%;
+}
+
+.MainImg img {
+  width: 100%;
+  border-bottom: 20px solid black;
+}
+
+.MainTitle {
+  position: absolute;
+  top: 60%;
+  width: 100%;
+  margin: 0;
+  color: #FFDF00;
+  text-shadow: 6px 6px 8px black;
+}
+
+.MainTitle h1 {
+  font-family: Kaushan Script;  /* Only place where Kaushan Script is used is h1 tags */
+  text-transform: uppercase;
+  font-size: 128px;
+  margin: 0;
+}
+
+.LoginBtn {
+  background: white;
+  width: 15vw;
+  height:10vh;
+  border-radius: 15px;
+  border-color: #FFDF00;
+  font-weight: bolder;
+  font-size: 300%;
+  font-family: Kaushan Script;
+  color: #FFDF00;
+  text-shadow: 3px 3px 3px black;
+  cursor: pointer;
+}
+
+.BannerBox img {
+  width: 100%;
+  border-bottom: 20px solid black;
+}
+.BannerBox > h1 {
+  font-size: 128px;
+  top: 10%;
+  color: yellow;
+  position: absolute;
+  font-family: 'Kaushan Script', cursive;
+  text-shadow: 6px 6px 8px black;
+}
+.FeeBox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5%;
+  position: relative;
+}
+.FeeInfoBottom{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 10%;
+}
+.FeeInfoTop{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.FeeInfoBottom > h1 {
+  border-bottom: 1px solid black;
+  width: 20vw;
+  margin: 0 auto;
+}
+.FeeInfoTop > h1 {
+  border-bottom: 1px solid black;
+  width: 100%;
+  margin: 0 auto;
+}
+ .TopInfo {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ .FancyLine {
+   border-right: 1px solid black;
+   position: absolute;
+   top: 10%;
+   bottom: 40%;
+ }
+.FeeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.FeeInfoFormatTop {
+  display: flex;
+  flex-wrap: wrap;
+  width: 25%;
+}

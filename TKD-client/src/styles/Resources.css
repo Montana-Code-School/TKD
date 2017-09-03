@@ -1,9 +1,0 @@
-.pdf {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.tableOfContents li {
-  text-align: left;
-}
