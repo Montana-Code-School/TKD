@@ -9,7 +9,7 @@ export default class Resources extends React.Component {
     return (
       <div className="container">
         <h1>RESOURCES</h1>
-        <div>
+
          <p>DOWNLOAD APPLICATION</p><br/>
           <div className="pdf">
            <div className="tableOfContents">
@@ -20,9 +20,9 @@ export default class Resources extends React.Component {
               <li>Black Belt Examination Application</li>
             </ol>
           </div>
-            <iframe title="pdfs" className="pdfs" src={Application} width="45%" height="700" />
+            <iframe title="pdfs" className="pdfs" width="45%" src={Application} height="700" />
           </div>
-          <div>
+          <div className="pdf">
             <p>DOWNLOAD INFORMATION</p><br/>
             <div className="pdf">
               <div className="tableOfContents">
@@ -43,7 +43,6 @@ export default class Resources extends React.Component {
               <iframe title="pdfs" className="pdfs" src={Info} width="45%" height="700" />
             </div>
           </div>
-        </div>
         <Footer />
       </div>
     );
