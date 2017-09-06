@@ -1,14 +1,9 @@
-html, body {
-  height: 100%;
-  font-family: Helvetica;
-}
-
 .navContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0;
-  flex: 0 0 20px;
+  width: 100%;
   padding: 0px;
 }
 
@@ -24,7 +19,7 @@ html, body {
   justify-content: center;
   align-items: center;
   list-style: none;
-  padding: 1em 8%;
+  padding: 1em;
   font-size: larger;
   background-color: #000000;
   color: white;

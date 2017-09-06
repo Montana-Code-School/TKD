@@ -64,7 +64,7 @@ export default class Auth {
     let accessToken = this.getAccessToken();
     this.auth0.client.userInfo(accessToken, (err, profile) => {
       if (profile) {
-        axios.get("http://localhost:3001/student/" + profile.name).then(res => {
+        axios.get("https://tkd-api.herokuapp.com/student/" + profile.name).then(res => {
           localStorage.setItem('user_id',res.data.result[0].id);
           localStorage.setItem('email', profile.name);
         })
