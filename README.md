@@ -2,7 +2,7 @@
 TKD is the project name (stands for Tae Kwon Do).  It is a website for the non-profit Saja Academy of Martial Arts in Stevensville.  It is a full-service website that showcases the Saja Academy and will enhance the academy’s current marketing efforts as well as its program administration.  Built with React JS on the front-end and integrating with a mySQL database on the back-end, the site also has a Stripe payment portal for students’ fee payments.
 
 ## TKD Project Description
-The TKD project website includes two github repositories: TKD and TKD-backend. Each repository is deployed to its own Heroku instance. The front-end static files (TKD) can be found at    . The back-end server (TKD-backend) can be found at    .
+The TKD project website includes two github repositories: TKD and TKD-backend. Each repository is deployed to its own Heroku instance. The front-end static files (TKD) can be found at https://saja-academy.herokuapp.com. The back-end server (TKD-backend) can be found at https://tkd-api.herokuapp.com.
 
 **TKD** is the repository with the project's static front-end files. It is built primarily with Create-React-App. Since the built-in server in the Create-React-App package (npm package React-Scripts) is primarily there for development purposes only, it is not suitable for a production environment. For this reason, the client side and the backend portion of the website were separated into two instances on Heroku and two different repositories on Github. In addition, Heroku doesn't seem to work easily when the static front-end files make calls to a production server from within the same Heroku instance.  
 
