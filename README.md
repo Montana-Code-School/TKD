@@ -21,7 +21,7 @@ The TKD project website includes two github repositories: [TKD](https://github.c
 4. In order to start the development server and run in localhost, run node server.js in terminal
 
 ## Prerequisites
--You should have current versions of node and npm installed https://nodejs.org/en/download/ to install node and https://docs.npmjs.com/cli/install to install npm.
+You should have current versions of [node](https://nodejs.org/en/download/) and [npm](https://docs.npmjs.com/cli/install) installed on your computer.
 
 ## Built With
 The front-end component of this website was built with:
