@@ -20,7 +20,7 @@ export default class Resources extends React.Component {
               <li>Black Belt Examination Application</li>
             </ol>
           </div>
-            <iframe title="pdfs" className="pdfs" width="45%" src={Application} height="700" />
+            <iframe title="pdfs" className="pdfs" width="45%"src={Application} height="700" />
           </div>
           <div className="pdf">
             <p>DOWNLOAD INFORMATION</p><br/>
