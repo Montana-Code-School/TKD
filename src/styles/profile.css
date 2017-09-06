@@ -1,8 +1,30 @@
 table, th, td {
   border: 1px solid black;
+  text-align: center;
+  border: 2px solid grey;
 }
 
+table {
+  border-collapse: collapse;
+  box-shadow: 5px 5px 3px grey; 
+}
+
+td {
+  padding: 7px;
+}
+tr {
+  padding: 30px 40px;
+}
 h3 {
   text-transform: uppercase;
   font-variant: small-caps;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
 }
