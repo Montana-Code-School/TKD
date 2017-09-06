@@ -4,7 +4,7 @@ TKD is the project name (stands for Tae Kwon Do).  It is a website for the non-p
 ## TKD Project Description
 The TKD project website includes two github repositories: TKD and TKD-backend. Each repository is deployed to its own Heroku instance. The front-end static files (TKD) can be found at    . The back-end server (TKD-backend) can be found at    .
 
-**TKD **is the repository with the project's static front-end files. It is built primarily with Create-React-App. Since the built-in server in the Create-React-App package (npm package React-Scripts) is primarily there for development purposes only, it is not suitable for a production environment. For this reason, the client side and the backend portion of the website were separated into two instances on Heroku and two different repositories on Github. In addition, Heroku doesn't seem to work easily when the static front-end files make calls to a production server from within the same Heroku instance.  
+**TKD** is the repository with the project's static front-end files. It is built primarily with Create-React-App. Since the built-in server in the Create-React-App package (npm package React-Scripts) is primarily there for development purposes only, it is not suitable for a production environment. For this reason, the client side and the backend portion of the website were separated into two instances on Heroku and two different repositories on Github. In addition, Heroku doesn't seem to work easily when the static front-end files make calls to a production server from within the same Heroku instance.  
 
 ## Getting Started (Development Environment)
 
