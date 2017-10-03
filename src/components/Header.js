@@ -1,7 +1,8 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import navImgOne from '../img/navBar_KoreanFlag.png';
 import navImgTwo from '../img/Jungdo.png';
+import { Navbar, Button } from 'react-bootstrap';
 import '../styles/Header.css';
 
 export default class Header extends React.Component {
@@ -42,13 +43,13 @@ export default class Header extends React.Component {
           </div>
           <div className="row2column2">
 
-            <Link to="/Home"><li>Home</li></Link>
-            <Link to="/Calendar"><li>Calendar</li></Link>
-            <Link to="/Registration"><li>Registration</li></Link>
-            <Link to="/Gallery"><li>Gallery</li></Link>
-            <Link to="/about"><li>About</li></Link>
-            <Link to="/Resources"><li>Resources</li></Link>
-            <Link to="/Profile"><li>Profile</li></Link>
+            <Link to="/Home">Home</Link>
+            <Link to="/Calendar">Calendar</Link>
+            <Link to="/Registration">Registration</Link>
+            <Link to="/Gallery">Gallery</Link>
+            <Link to="/about">About</Link>
+            <Link to="/Resources">Resources</Link>
+            <Link to="/Profile">Profile</Link>
 
           </div>
         </ul>
