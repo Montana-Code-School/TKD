@@ -1,0 +1,201 @@
+-- MySQL dump 10.13  Distrib 5.7.19, for Linux (x86_64)
+--
+-- Host: localhost    Database: saja_academy
+-- ------------------------------------------------------
+-- Server version	5.7.19-0ubuntu0.17.04.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `attendance`
+--
+
+DROP TABLE IF EXISTS `attendance`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `attendance` (
+  `id` int(11) NOT NULL,
+  `class_id` int(11) NOT NULL COMMENT '			',
+  `student_id` varchar(45) NOT NULL,
+  `did_attend` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`),
+  UNIQUE KEY `student_id_UNIQUE` (`student_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `attendance`
+--
+
+LOCK TABLES `attendance` WRITE;
+/*!40000 ALTER TABLE `attendance` DISABLE KEYS */;
+INSERT INTO `attendance` VALUES (1200,901,'1','yes'),(1201,901,'2','no');
+/*!40000 ALTER TABLE `attendance` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `belts`
+--
+
+DROP TABLE IF EXISTS `belts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `belts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '	',
+  `color` varchar(45) NOT NULL,
+  `beltscol` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `belts`
+--
+
+LOCK TABLES `belts` WRITE;
+/*!40000 ALTER TABLE `belts` DISABLE KEYS */;
+INSERT INTO `belts` VALUES (1,'Yellow Stripe','11th kup'),(2,'Yellow','10th kup'),(3,'Green Stripe','9th Kup'),(4,'Green','8th Kup'),(5,'Blue Stripe','7th Kup'),(6,'Blue','6th Kup'),(7,'Brown Stripe','5th Kup'),(8,'Brown ','4th Kup'),(9,'red Stripe','3rd Kup'),(10,'Red','2nd Kup'),(11,'Black Stripe','1st Kup'),(12,'Black','1st Dan'),(13,'Black','2nd Dan'),(14,'Black','3rd Dan'),(15,'Black','4th Dan'),(16,'Black','5th Dan'),(17,'Black ','6th Dan'),(18,'Black','7th Dan'),(19,'Black','8th Dan'),(20,'Black','9th Dan');
+/*!40000 ALTER TABLE `belts` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `classes`
+--
+
+DROP TABLE IF EXISTS `classes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `classes` (
+  `id` int(11) NOT NULL,
+  `class_date` date NOT NULL COMMENT '	',
+  `is_class_test` date DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `classes`
+--
+
+LOCK TABLES `classes` WRITE;
+/*!40000 ALTER TABLE `classes` DISABLE KEYS */;
+INSERT INTO `classes` VALUES (901,'2017-09-01',NULL),(904,'2017-09-04',NULL),(905,'2017-09-05',NULL),(908,'2017-09-08',NULL),(911,'2017-09-11',NULL),(912,'2017-09-12',NULL),(915,'2017-09-15',NULL),(918,'2017-09-18',NULL),(919,'2017-09-19',NULL),(922,'2017-09-22','2017-09-22');
+/*!40000 ALTER TABLE `classes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `payment`
+--
+
+DROP TABLE IF EXISTS `payment`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `payment` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '	',
+  `student_id` int(11) NOT NULL,
+  `register_date` date NOT NULL,
+  `experation_date` date NOT NULL,
+  `family_or_single` varchar(45) NOT NULL,
+  `amount` varchar(45) DEFAULT NULL,
+  `month_to_month` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=84 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `payment`
+--
+
+LOCK TABLES `payment` WRITE;
+/*!40000 ALTER TABLE `payment` DISABLE KEYS */;
+INSERT INTO `payment` VALUES (42,1,'2017-03-01','2017-09-01','family',NULL,'0'),(43,2,'2017-03-01','2017-09-01','family',NULL,'0'),(44,3,'2017-03-01','2017-09-01','family','35','0'),(45,4,'2017-03-01','2017-09-01','family','35','0'),(46,5,'2017-03-01','2017-09-01','family','35','0'),(47,6,'2017-03-01','2017-09-01','family',NULL,'0'),(48,7,'2017-03-01','2017-09-01','family','35','0'),(49,8,'2017-03-01','2017-09-01','family',NULL,'0'),(50,9,'2017-03-01','2017-09-01','family',NULL,'0'),(51,10,'2017-03-01','2017-09-01','family',NULL,'0'),(52,11,'2017-03-01','2017-09-01','family',NULL,'0'),(53,12,'2017-03-01','2017-09-01','family',NULL,'0'),(54,13,'2017-03-01','2017-09-01','family','25','0'),(55,14,'2017-03-01','2017-09-01','family','25','0'),(56,15,'2017-03-01','2017-09-01','family',NULL,'0'),(57,16,'2017-03-01','2017-09-01','family',NULL,'0'),(58,17,'2017-03-01','2017-09-01','family',NULL,'0'),(59,18,'2017-03-01','2017-09-01','family',NULL,'0'),(60,19,'2017-03-01','2017-09-01','family',NULL,'0'),(61,20,'2017-03-01','2017-09-01','family',NULL,'0'),(62,21,'2017-03-01','2017-09-01','family','25','0'),(63,22,'2017-03-01','2017-09-01','family','25','0'),(64,23,'2017-03-01','2017-09-01','single',NULL,'0'),(65,24,'2017-03-01','2017-09-01','single',NULL,'0'),(66,25,'2017-03-01','2017-09-01','family','35','0'),(67,26,'2017-03-01','2017-09-01','family',NULL,'0'),(68,27,'2017-03-01','2017-09-01','family','35','0'),(69,28,'2017-03-01','2017-09-01','family',NULL,'0'),(70,29,'2017-03-01','2017-09-01','family',NULL,'0'),(71,30,'2017-03-01','2017-09-01','family',NULL,'0'),(72,31,'2017-03-01','2017-09-01','single','35','0'),(73,32,'2017-03-01','2017-09-01','single','25','0'),(74,33,'2017-03-01','2017-09-01','family',NULL,'0'),(75,34,'2017-03-01','2017-09-01','family',NULL,'0'),(76,35,'2017-03-01','2017-09-01','family',NULL,'0'),(77,36,'2017-01-01','2017-06-01','family',NULL,'0'),(78,37,'2017-01-01','2017-06-01','family',NULL,'0'),(79,38,'2017-01-01','2017-06-01','family',NULL,'0'),(80,39,'2017-01-01','2017-06-01','family',NULL,'0'),(81,40,'2017-01-01','2017-06-01','single',NULL,'0'),(82,41,'2017-03-01','2017-09-01','single',NULL,'0'),(83,42,'2017-03-01','2017-09-01','familiy',NULL,'0');
+/*!40000 ALTER TABLE `payment` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `student`
+--
+
+DROP TABLE IF EXISTS `student`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `student` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `belt_id` varchar(45) NOT NULL,
+  `belt_size` int(11) NOT NULL,
+  `start_date` date NOT NULL,
+  `last_test_date` date NOT NULL,
+  `active` varchar(45) NOT NULL,
+  `ajf_#` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `student`
+--
+
+LOCK TABLES `student` WRITE;
+/*!40000 ALTER TABLE `student` DISABLE KEYS */;
+INSERT INTO `student` VALUES (1,'Abby Lofts',800,'2nd Kup',2,'2014-01-01','2017-06-23','1','HM14-09',''),(2,'Bethany Lofts',801,'2nd Kup',1,'2014-01-01','2017-06-23','1','HM14-10',''),(3,'Elizabeth Lofts',802,'4th Kup',5,'2014-01-01','2017-03-23','1','HM14-13',''),(4,'Amanda Schoppa',803,'2nd Kup',5,'2014-01-01','2017-06-23','0','HM14-05',''),(5,'Sherri Harris',804,'1st Kup',6,'2013-01-01','2017-03-23','1','HM13-09',''),(6,'Shalyn Harris',805,'1st Kup',5,'2013-01-01','2016-09-17','1','HM13-01',''),(7,'Ken Scrivner',806,'1st Kup',6,'2013-01-01','2016-09-17','0','HM13-05',''),(8,'Dale Scrivner',807,'1st Kup',6,'2013-01-01','2016-09-17','0','HM13-02',''),(9,'Nathan Scrivner',808,'1st Kup',6,'2013-01-01','2016-09-17','0','HM13-04',''),(10,'Austin Scrivner',809,'1st Kup',5,'2013-01-01','2017-03-23','1','HM13-03',''),(11,'Jessican Harris',810,'5th Kup',5,'2014-01-01','2016-09-17','1','HM14-01',''),(12,'Kim Harris',811,'5th Kup',3,'2014-01-01','2016-09-17','1','HM14-02',''),(13,'Roger Rahmsdorf',812,'1st Dan',5,'2010-01-01','2015-09-17','1','HM10-03',''),(14,'Dan Peeler',813,'6th Kup',5,'2015-01-01','2017-06-17','1','HM15-01',''),(15,'Matthew Trull',814,'1st Dan',2,'2011-01-01','2016-09-17','1','HM11-07',''),(16,'Justin Schoppa',815,'7th Kup',1,'2014-01-01','2017-03-23','0','HM14-11',''),(17,'Aubrey Schoppa',816,'11th Kup',1,'2016-01-01','2017-06-23','0','SM16-08',''),(18,'Anna Pernsteiner',817,'10th Kup',1,'2016-01-01','2017-06-23','1','SM16-06',''),(19,'Phin Pernsteiner',818,'10th Kup',1,'2016-01-01','2017-06-23','1','SM16-07',''),(20,'Alli Lloyd',819,'10th Kup',3,'2016-01-01','2016-09-17','0','SM16-01',''),(21,'Cody Gordon',820,'10th Kup',1,'2016-01-01','2017-03-23','1','SM16-03',''),(22,'Daman Colburn',821,'11th Kup',4,'2016-01-01','2016-09-17','1','SM16-02',''),(23,'Caleb Pernsteiner',822,'10th Kup',4,'2016-01-01','2017-03-23','1','SM16-04',''),(24,'Aiden Pernsteiner',823,'10th Kup',4,'2016-01-01','2107-03-23','1','SM16-05',''),(25,'Tucker Lay',824,'8th Kup',2,'2016-01-01','2017-06-23','1','SM16-09',''),(26,'Daisey Lay',825,'10th Kup',1,'2017-01-01','2017-06-23','1','SM17-02',''),(27,'Haley Hoffman',826,'10th Kup',3,'2016-01-01','2017-03-23','1','SM16-10',''),(28,'Micah Hoffman',827,'10th Kup',2,'2016-01-01','2107-03-23','1','SM16-11',''),(29,'Trinity Hoffman',828,'10th Kup',2,'2016-01-01','2017-03-23','1','SM16-12',''),(30,'Isaiah Hoffman',829,'10th Kup',0,'2016-01-01','2017-03-23','1','SM16-13',''),(31,'Lucas Pernsteiner',830,'8th Kup',5,'2016-01-01','2017-03-23','1','SM16-14',''),(32,'Bryce Morrell',831,'10th Kup',1,'2017-01-01','2017-06-23','1','SM17-01',''),(33,'April Trull',832,'3rd Dan',6,'2007-01-01','2014-03-17','1','YEE-219',''),(34,'Breanna Meuchel',833,'2nd Dan',5,'2007-01-01','2012-03-07','0','HM07-04',''),(35,'Mary Moranville',834,'1st Dan',6,'2007-01-01','2013-03-07','0','CHO-1056',''),(36,'Jonathan Trull',835,'1st Dan',4,'2008-01-01','2015-03-17','0','CHO-1101',''),(37,'Liz Rohmsdorf',836,'6th Kup',3,'2010-01-01','2013-01-01','0','HM10-01',''),(38,'Coe Rahmsdorf',837,'1st Kup',2,'2010-01-01','2015-03-17','1','HM10-08',''),(39,'Sam Fullante',838,'8th Kup',2,'2010-01-01','2012-03-03','0','HM10-04',''),(40,'Noah Fullante',839,'11th Kup',2,'2012-01-01','2012-06-06','0','HM12-05',''),(41,'Isaac Curran',840,'11th Kup',1,'2012-01-01','2012-09-17','0','HM12-04',''),(42,'Andrew Scrivner',841,'8th Kup',5,'2014-01-01','2015-03-17','0','HM14-03',''),(43,'Brenda Iverson',842,'8th Kup',6,'2008-01-01','2014-03-17','0','HM08--06',''),(44,'John rahmsdorf',843,'10th Kup',1,'2013-01-01','2017-06-23','1','HM13-06',''),(45,'Virginia Wilkinson',844,'7th Kup',4,'2014-01-01','2015-03-17','0','HM14-04',''),(46,'Leslie Schoppa',845,'6th Kup',5,'2014-01-01','2015-03-17','0','HM14-06','');
+/*!40000 ALTER TABLE `student` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `login` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  `phone` varchar(11) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `permission` varchar(45) NOT NULL,
+  `start_date` date NOT NULL,
+  `end_date` date DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=803 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user`
+--
+
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (800,'hello','abbyl','540-3197','abby@lofts.com','yes','2014-01-01',NULL),(801,'goodbye','bethanyl','540-3197','bethany@lofts.com','yes','2014-01-01',NULL),(802,'joelsfave','elizabethl','540-3179','elizabeth@lofts.com','yes','2014-01-01',NULL);
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2017-10-03 18:09:10
