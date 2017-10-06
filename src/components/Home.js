@@ -4,6 +4,8 @@ import Gmap from './Gmap';
 import headerImg from '../img/homeMainImg.jpg';
 import Footer from './Footer.js';
 import '../styles/Home.css';
+import {ReactBootstrap, ReactBootstrapModal} from 'react-bootstrap';
+
 
 export default class Home extends React.Component {
 

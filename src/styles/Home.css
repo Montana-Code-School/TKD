@@ -93,7 +93,7 @@ h2 {
 
 .eventLogContent {
   width: 50%;
-  padding: 5em 0em;
+  padding: 5em;
 }
 
 /* many unordered lists used throughout as they are a breeze to style with flexbox, but make sure to set padding and margin to 0 */
