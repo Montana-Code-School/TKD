@@ -39,7 +39,6 @@ h2 {
   margin: 0;
   color: yellow;
   text-shadow: 6px 6px 8px black;
-  /*font-size: calc(62.5% + 100 * (100vw - 360px) / 1500)*/
 }
 
 .mainTitle h1 {
