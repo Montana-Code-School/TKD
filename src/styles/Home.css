@@ -36,19 +36,20 @@ h2 {
   margin: 0;
   color: yellow;
   text-shadow: 6px 6px 8px black;
+  /*font-size: calc(62.5% + 100 * (100vw - 360px) / 1500)*/
 }
 
 .mainTitle h1 {
   font-family: Kaushan Script;  /* Only place where Kaushan Script is used is h1 tags */
   text-transform: uppercase;
-  font-size: 128px;
+  font-size: 9vw;
   margin: 0;
 }
 
 .mainTitle h2 {
   font-family: Helvetica;
   margin: 0;
-  font-size: 32px;
+  font-size: 3vw;
 }
 
 .coloredNavContainer {
