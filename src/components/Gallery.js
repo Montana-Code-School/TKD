@@ -37,10 +37,11 @@ export default class Gallery extends React.Component {
 
       <div className="mainImg">
         <img src={kicksImg} alt='Tae Kwon Do kids doing kicks' />
-      </div>
 
-      <div className="mainTitle">
-        <h1>Gallery</h1>
+
+        <div className="mainTitle">
+          <h1>Gallery</h1>
+        </div>
       </div>
 
       <div className="gridImg">

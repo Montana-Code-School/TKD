@@ -11,9 +11,9 @@ return (
   <div className="container">
     <div className="mainImg">
       <img className="aboutImg" src={aboutImg} alt="girl holding staff" />
-    </div>
-    <div className="mainTitle">
-      <h1>About</h1>
+      <div className="mainTitle">
+        <h1>About</h1>
+      </div>
     </div>
     <div className="aboutSection">
 
