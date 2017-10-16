@@ -46,6 +46,7 @@ return (
         <li>Assistant Instructors</li>
         <li>Roger Rahmsdorf</li>
         <li>Ken Scrivner</li>
+        <li>Sherri Harris</li>
       </ul>
     </div>
     <Footer />

@@ -58,6 +58,7 @@ h2 {
   width: 100%;
   margin-top: -4px;  /* the mainImg above this has a tiny margin due to the large bottom border so -4 top margin covers this up */
   padding: 0;
+  font-size: 2vw;
 }
 
 .navSquare {
@@ -89,11 +90,13 @@ h2 {
 .eventLog hr {
   width: 15%;
   margin-bottom: 1.2em;
+  font-size: 2vw;
 }
 
 .eventLogContent {
   width: 50%;
   padding: 5em;
+  font-size: 2vw;
 }
 
 /* many unordered lists used throughout as they are a breeze to style with flexbox, but make sure to set padding and margin to 0 */
@@ -102,6 +105,7 @@ h2 {
   margin: 0;
   padding: 0;
   line-height: 1.5em;
+  font-size: 2vw;
 }
 
 .firstEventLog {

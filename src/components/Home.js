@@ -24,7 +24,7 @@ export default class Home extends React.Component {
     {/*Schools and Events section*/}
         <div className="eventLog">
           <div className="eventLogContent firstEventLog">
-            <h2>Brother Schools</h2>
+            <h2>American Jungdo Federation Schools</h2>
             <hr />
               <ul>
                 <li>Parks Martial Arts Academy<br/>1920 Central Ave. Billings, MT 59102 <br/> (406)245-8808</li><br/>
