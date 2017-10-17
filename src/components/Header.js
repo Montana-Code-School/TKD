@@ -1,7 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import navImgOne from '../img/navBar_KoreanFlag.png';
-import navImgTwo from '../img/Jungdo.png';
 import Navbar from '../components/Navbar';
 import '../styles/Header.css';
 
