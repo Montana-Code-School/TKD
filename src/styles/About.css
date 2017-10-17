@@ -53,8 +53,6 @@ h2 {
 
 .aboutSection {
   width: 100%;
-  /*display: flex;
-  flex-wrap: wrap;*/
 }
 
 .aboutContentSection1 {
@@ -75,7 +73,7 @@ h2 {
 
 .aboutContentSection1 p, .aboutContentSection2 p {
   text-align: left;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.5em;
   margin: 0;
 }

@@ -43,6 +43,7 @@ body {
   color: #FFDF00;
   text-shadow: 3px 3px 3px black;
   cursor: pointer;
+  font-size: 4vw;
 }
 
 .BannerBox img {
@@ -63,6 +64,7 @@ body {
   align-items: center;
   margin-top: 5%;
   position: relative;
+  font-size: 2vw;
 }
 .FeeInfoBottom{
   display: flex;

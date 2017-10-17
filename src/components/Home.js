@@ -27,12 +27,12 @@ export default class Home extends React.Component {
             <h2>American Jungdo Federation Schools</h2>
             <hr />
               <ul>
-                <li>Parks Martial Arts Academy<br/>1920 Central Ave. Billings, MT 59102 <br/> (406)245-8808</li><br/>
-                <li>Cody Martial Arts <br/>502 Ray Rd Cody, WY 82414 <br/>(307)527-7613</li><br/>
-                <li>AJF Martial Arts Academy-Ranchester <br/>103 Carl St. Ranchester, WY 82839 <br/>(307)655-9761</li><br/>
-                <li>AJF Martial Arts-Sheridan <br/>1030 N Main St. Sheridan, WY 82801<br/> (307)751-5540</li><br/>
-                <li>Parks Martial Arts Academy-Hardin <br/>121 N Mitchell Ave. Hardin, MT 59034<br/> (406)679-1874</li><br/>
-                <li>AJF Martial Arts-Pierre <br/>203 E Sioux Ave Pierre S.Dakota 57501 <br/>(605)295-0352</li>
+                <li><u>Parks Martial Arts Academy</u><br/>1920 Central Ave. Billings, MT 59102 (406)245-8808</li>
+                <li><u>Cody Martial Arts</u> <br/>502 Ray Rd Cody, WY 82414 (307)527-7613</li>
+                <li><u>AJF Martial Arts Academy-Ranchester</u><br/>103 Carl St. Ranchester, WY 82839 (307)655-9761</li>
+                <li><u>AJF Martial Arts-Sheridan</u> <br/>1030 N Main St. Sheridan, WY 82801 (307)751-5540</li>
+                <li><u>Parks Martial Arts Academy-Hardin</u> <br/>121 N Mitchell Ave. Hardin, MT 59034 (406)679-1874</li>
+                <li><u>AJF Martial Arts-Pierre</u> <br/>203 E Sioux Ave Pierre S.Dakota 57501 (605)295-0352</li>
               </ul>
           </div>
           <div className="eventLogContent">
