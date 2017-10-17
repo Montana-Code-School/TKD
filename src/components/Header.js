@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import navImgOne from '../img/navBar_KoreanFlag.png';
-import navImgTwo from '../img/Jungdo.png';
+import Navbar from '../components/Navbar';
 import '../styles/Header.css';
 
 export default class Header extends React.Component {
@@ -35,23 +34,8 @@ export default class Header extends React.Component {
               }
           </div>
         </ul>
-        <ul className="row2">
-          <div className="row2column1">
-            <li><img src={navImgOne} alt="" /></li>
-            <li><img src={navImgTwo} alt="" /></li>
-          </div>
-          <div className="row2column2">
-
-            <Link to="/Home"><li>Home</li></Link>
-            <Link to="/Calendar"><li>Calendar</li></Link>
-            <Link to="/Registration"><li>Registration</li></Link>
-            <Link to="/Gallery"><li>Gallery</li></Link>
-            <Link to="/about"><li>About</li></Link>
-            <Link to="/Resources"><li>Resources</li></Link>
-            <Link to="/Profile"><li>Profile</li></Link>
-
-          </div>
-        </ul>
+        <Navbar>
+        </Navbar>
       </header>
     );
   }
